@@ -1,0 +1,20 @@
+dependencies:
+  gem:
+    - bundler
+  brew:
+    - plantuml
+  custom:
+    - bundle i --quiet
+actions:
+  adoc:
+    command: bundle exec asciidoctor-revealjs -r asciidoctor-diagram -a revealjsdir=https://cdn.jsdelivr.net/npm/reveal.js@3.9.2
+  html:
+    command: ops adoc -D build/html src/presentation.adoc
+    description: Build HTML slides
+  watch:
+    command: fswatch src | xargs -I{} ops html
+    description: Watch for changes in 'src/' and run 'ops html' automatically
+options:
+  environment:
+    # Need this to find Java generate PlantUML diagrams
+    JAVA_HOME: "/usr/local/opt/openjdk"

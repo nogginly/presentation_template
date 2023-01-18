@@ -1,0 +1,4 @@
+/build
+.bundle/gems
+.DS_Store
+Gemfile.lock

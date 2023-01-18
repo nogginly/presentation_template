@@ -1,0 +1,38 @@
+= Title Slide
+
+== Slide One
+
+* Foo
+* Bar
+* World
+
+== Slide One Point Six
+
+* Foo
+* World
+
+== Slide Two
+
+A Great Story
+
+[.notes]
+--
+* tell anecdote
+* make a point
+--
+
+== Slide Three
+
+A diagram!
+
+[plantuml, target=diagram-classes, format=png]
+....
+class BlockProcessor
+class DiagramBlock
+class DitaaBlock
+class PlantUmlBlock
+
+BlockProcessor <|-- DiagramBlock
+DiagramBlock <|-- DitaaBlock
+DiagramBlock <|-- PlantUmlBlock
+....
