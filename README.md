@@ -2,9 +2,7 @@
 
 This is a template for making presentations using AsciiDoc [1].
 
-## Building presentation
-
-### First time
+## Getting started
 
 Run the following once to setup the dependencies.
 
@@ -12,17 +10,14 @@ Run the following once to setup the dependencies.
 ops up
 ```
 
-### Build HTML
+## Building presentation
 
-Run the following to generate the presentation HTML.
-
-```sh
-ops html
-```
-
-### Monitor and build HTML
-
-Run the following to watch for changes in the `src/` folder and run `ops html` automatically.
+| Action                                                                    | Command     |
+| ------------------------------------------------------------------------- | ----------- |
+| Generate the presentation HTML into the `build/html` folder               | `ops html`  |
+| Monitor for changes in the `src/` folder and run `ops html` automatically | `ops watch` |
+| Launch presentation HTML in your default browser                          | `ops open`  |
+| Clean up the `build/` folder                                              | `ops clean` |
 
 ## Contributing
 

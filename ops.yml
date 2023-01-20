@@ -3,6 +3,7 @@ dependencies:
     - bundler
   brew:
     - plantuml
+    - fswatch
   custom:
     - bundle i --quiet
 actions:
@@ -11,6 +12,14 @@ actions:
   html:
     command: ops adoc -D build/html src/presentation.adoc
     description: Build HTML slides
+  clean:
+    command: rm -rf build
+    description: Build HTML slides
+  open:
+    command: ops html && open build/html/presentation.html
+    description: Build and open the presentation in default browser
+  print:
+    command: echo "\n\nRun 'ops open' and then append the following to the URL - \?print-pdf&pdfSeparateFragments=false\n\n"
   watch:
     command: fswatch src | xargs -I{} ops html
     description: Watch for changes in 'src/' and run 'ops html' automatically
